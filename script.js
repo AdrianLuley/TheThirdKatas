@@ -11,25 +11,27 @@ function add(x, y) {
 //#2
 function multiply(x, y) {
     let built = 0;
-    for (var x = 0; x < 6; x++){
-        built = add(built, y);
+    for (var i = 0; i < y; i++){
+        built = add(built, x);
     }
     return built;
     }
-let built = multiply(6, 8); anwserBox(multiply(6, 8), "d2");
+let built = multiply(6, 8); anwserBox(multiply(4, 4), "d2");
 // //#3
 function power(x, n) {
-    let built2 = 0;
-    for (var x = 0; x < 32; x++){
-        built2 = add(built2, n);
+    let built2 = 1;
+    for (var j = 0; j < n; j++){
+        built2 = multiply(built2, x);
     }
     return built2;
 }
 let built2 = power(2, 8); anwserBox(power(2, 8), "d3");
 // //#4
-function factorial(built3){
-    for (var i = built3 - 1; i >= 1; i--){
-        built3 *= i;
+
+function factorial(n){
+    let built3 = 1;
+    for (var i = 1; i <= n; i++){
+        built3 = multiply(built3, i);
     }
             return built3;
 }
